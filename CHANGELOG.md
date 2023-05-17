@@ -2,6 +2,15 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.0 (2023-05-17)
+### Feature
+* Enable last name parameter ([`0685946`](https://github.com/manudawber/python-semantic-release/commit/06859468ceb0692f99759d6e23f99fe135008745))
+
+### Fix
+* Elevate permissions to write tags ([`5cc0cee`](https://github.com/manudawber/python-semantic-release/commit/5cc0cee78cc5c873adf3005d034016362ed1e829))
+* Remove reserved secret GITHUB_TOKEN ([`856cc4a`](https://github.com/manudawber/python-semantic-release/commit/856cc4a9f10b3a5d88a0590db3c476a4d5e96635))
+* Delete test files ([`a7b75b0`](https://github.com/manudawber/python-semantic-release/commit/a7b75b0fcb92baa3e31e49340b6bb0072ebb8a67))
+
 ## v0.1.6 (2023-05-17)
 ### Fix
 * Test fake build 2 ([`5a41ef5`](https://github.com/manudawber/python-semantic-release/commit/5a41ef5b37cc69b935c57c2c02831e2f06f0e874))
