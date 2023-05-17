@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.1 (2023-05-17)
+### Fix
+* Disable remove dist ([`034b88d`](https://github.com/manudawber/python-semantic-release/commit/034b88ddbb2bc03897ec6ad383d78f2e4fe5427d))
+
 ## v0.2.0 (2023-05-17)
 ### Feature
 * Enable last name parameter ([`0685946`](https://github.com/manudawber/python-semantic-release/commit/06859468ceb0692f99759d6e23f99fe135008745))
