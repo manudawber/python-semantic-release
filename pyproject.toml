@@ -1,7 +1,11 @@
 [tool.semantic_release]
+# Releases
 branch = "main"
 version_variable = "src/__init__.py:__version__"
 version_source = "tag"
+# Commits
 commit_version_number = true
+# Distributions
 upload_to_pypi = false
 upload_to_repository = false
+build_command = "true"
