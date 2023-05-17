@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.6 (2023-05-17)
+### Fix
+* Test fake build 2 ([`5a41ef5`](https://github.com/manudawber/python-semantic-release/commit/5a41ef5b37cc69b935c57c2c02831e2f06f0e874))
+
 ## v0.1.5 (2023-05-17)
 ### Fix
 * Test fake build ([`af1f56b`](https://github.com/manudawber/python-semantic-release/commit/af1f56b02c0609fae330bf50b10266750e55d3f8))
