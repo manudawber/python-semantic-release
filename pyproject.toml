@@ -3,4 +3,5 @@ branch = "main"
 version_variable = "src/__init__.py:__version__"
 version_source = "tag"
 commit_version_number = true
+upload_to_pypi = false
 upload_to_repository = false
