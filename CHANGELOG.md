@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.5 (2023-05-17)
+### Fix
+* Test fake build ([`af1f56b`](https://github.com/manudawber/python-semantic-release/commit/af1f56b02c0609fae330bf50b10266750e55d3f8))
+
 ## v0.1.4 (2023-05-17)
 ### Fix
 * Ensure upload is disabled ([`d1c0915`](https://github.com/manudawber/python-semantic-release/commit/d1c09151c796ead3a0549162f69c585e981b6f28))
