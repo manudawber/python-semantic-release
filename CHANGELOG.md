@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.0 (2023-05-18)
+### Feature
+* Remove semantic release action ([`c12a994`](https://github.com/manudawber/python-semantic-release/commit/c12a9944c6ce5324c78906a094cffe1314be4882))
+
 ## v0.3.1 (2023-05-18)
 ### Fix
 * Syntax error ([`703a8f0`](https://github.com/manudawber/python-semantic-release/commit/703a8f06cfb7b226a78ab05bad9c686100da7526))
