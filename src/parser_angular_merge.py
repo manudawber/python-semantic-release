@@ -24,7 +24,7 @@ def parse_commit_message(message: str) -> ParsedCommit:
         message: A git commit message.
 
     Returns:
-        A `ParsedCommit` object containing semantic release versioning and changelog information.
+        A `ParsedCommit` object containing semantic release version and changelog information.
     """
     message = message.strip()  # remove leading/trailing blank lines
     if message.startswith("Merge pull request"):
