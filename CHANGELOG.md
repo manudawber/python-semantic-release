@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.5.0 (2023-05-18)
+### Feature
+* Improve commit message ([`956f80c`](https://github.com/manudawber/python-semantic-release/commit/956f80c4aa6bf1d810e584109d14a4585c2aaccf))
+
 ## v0.4.3 (2023-05-18)
 ### Fix
 * Print debug ([`8c8f984`](https://github.com/manudawber/python-semantic-release/commit/8c8f98420059b57229c793390db462abfb65cb2f))
