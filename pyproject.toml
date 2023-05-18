@@ -3,6 +3,8 @@
 branch = "main"
 version_variable = "src/__init__.py:__version__"
 version_source = "tag"
+# Commit Parsing
+commit_parser = "parser_angular_merge.parse_commit_message"
 # Commits
 commit_version_number = true
 # Distributions
