@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.3.1 (2023-05-18)
+### Fix
+* Syntax error ([`703a8f0`](https://github.com/manudawber/python-semantic-release/commit/703a8f06cfb7b226a78ab05bad9c686100da7526))
+
 ## v0.3.0 (2023-05-18)
 ### Feature
 * Create custom parser to handle merge commits ([`f7f31c4`](https://github.com/manudawber/python-semantic-release/commit/f7f31c4a0c733a8fc544362e19c2473cd9cec0c4))
