@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.2 (2023-05-18)
+### Fix
+* Added 1 and 2 ([#4](https://github.com/manudawber/python-semantic-release/issues/4)) ([`a6cea96`](https://github.com/manudawber/python-semantic-release/commit/a6cea9665c23584d28f26fa2ca220b9a65655142))
+
 ## v0.2.1 (2023-05-17)
 ### Fix
 * Disable remove dist ([`034b88d`](https://github.com/manudawber/python-semantic-release/commit/034b88ddbb2bc03897ec6ad383d78f2e4fe5427d))
