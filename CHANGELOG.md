@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.2 (2023-05-18)
+### Fix
+* Test print version ([`7c41882`](https://github.com/manudawber/python-semantic-release/commit/7c418821c52ca366cbbe9f2c7da19c4056c5e3a3))
+
 ## v0.4.1 (2023-05-18)
 ### Fix
 * Test print version ([`9e29b74`](https://github.com/manudawber/python-semantic-release/commit/9e29b7467ad7f8d37be5cec6d2e01ef29231982e))
