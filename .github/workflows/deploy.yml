@@ -27,8 +27,8 @@ jobs:
           GIT_COMMITTER_NAME: github-actions
           GIT_COMMITTER_EMAIL: github-actions@github.com
         run: |
-          semantic-release print-version --current
+          echo "old=$(semantic-release print-version --current)"
           semantic-release publish \
             -v DEBUG \
             -D commit_author="$GIT_COMMITTER_NAME <$GIT_COMMITTER_EMAIL>"
-          semantic-release print-version --current
+          echo "new=$(semantic-release print-version --current)"
