@@ -2,6 +2,18 @@
 
 <!--next-version-placeholder-->
 
+## v0.3.0 (2023-05-18)
+### Feature
+* Create custom parser to handle merge commits ([`f7f31c4`](https://github.com/manudawber/python-semantic-release/commit/f7f31c4a0c733a8fc544362e19c2473cd9cec0c4))
+* Create custom parser that handles merge commits ([`95cf94a`](https://github.com/manudawber/python-semantic-release/commit/95cf94acb0bf57d3bd623f2b09351c5220ff710e))
+
+### Fix
+* Checkout repo using PAT ([`3a1aa24`](https://github.com/manudawber/python-semantic-release/commit/3a1aa24737a423ad8fa5a7ae3d60caf430d669ab))
+* Use new PAT with repo scope ([`eb45fcc`](https://github.com/manudawber/python-semantic-release/commit/eb45fccb7bcf5231ca3f54c3a690f8f345eef3d2))
+* Set PYTHONPATH ([`b5a9430`](https://github.com/manudawber/python-semantic-release/commit/b5a9430910ac1a4e3a3ac19f5e68c902fd48a7af))
+* Remove use of semantic-release action ([`a6cebd2`](https://github.com/manudawber/python-semantic-release/commit/a6cebd2bfb85bc7364f4a6db1ab9e0eda68310ea))
+* Delete 1 and 2 ([`d415146`](https://github.com/manudawber/python-semantic-release/commit/d4151467a55e9e69e4aac5b9fd97162f58c4cea1))
+
 ## v0.2.2 (2023-05-18)
 ### Fix
 * Added 1 and 2 ([#4](https://github.com/manudawber/python-semantic-release/issues/4)) ([`a6cea96`](https://github.com/manudawber/python-semantic-release/commit/a6cea9665c23584d28f26fa2ca220b9a65655142))
