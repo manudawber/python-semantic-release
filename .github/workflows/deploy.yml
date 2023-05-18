@@ -21,7 +21,7 @@ jobs:
       - run: pip install python-semantic-release
       - env:
           PYTHONPATH: ${{ github.workspace }}/src
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT }}
           GIT_COMMITTER_NAME: github-actions
           GIT_COMMITTER_EMAIL: github-actions@github.com
         run: |
