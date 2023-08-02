@@ -21,4 +21,4 @@ jobs:
       github_actions_repo_ref: main
       branch: main
     secrets:
-      release_token: ${{ secrets.GITHUB_TOKEN }}
+      release_token: ${{ secrets.PAT }}
