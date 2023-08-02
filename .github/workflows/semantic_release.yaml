@@ -1,0 +1,108 @@
+name: Semantic release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_call:
+    inputs:
+      # Required until we can access the ref that was used when the workflow was called:
+      # https://github.com/actions/toolkit/issues/1264
+      github_actions_repo_ref:
+        description: The [h2gopower/github-actions](https://github.com/h2gopower/github-actions) branch, tag or SHA to checkout.
+        default: main
+        type: string
+      branch:
+        description: The branch to run releases from.
+        default: main
+        type: string
+      additional_options:
+        description: 'Additional Common Options for the publish command. Example: --noop'
+        required: false
+        type: string
+    secrets:
+      release_token:
+        description: A GitHub admin token that has repo scope in the target repo.
+        required: true
+    outputs:
+      old-version:
+        description: The version number before running semantic release.
+        value: ${{ jobs.semantic-release.outputs.old-version }}
+      old-version-tag:
+        description: The version number before running semantic release.
+        value: v${{ jobs.semantic-release.outputs.old-version }}
+      new-version:
+        description: The version number after running semantic release.
+        value: ${{ jobs.semantic-release.outputs.new-version }}
+      new-version-tag:
+        description: The version number after running semantic release.
+        value: v${{ jobs.semantic-release.outputs.new-version }}
+
+env:
+  INPUT_GITHUB_ACTIONS_REPO_REF: ${{ inputs.github_actions_repo_ref }}
+  INPUT_BRANCH: ${{ inputs.branch }}
+  INPUT_ADDITIONAL_OPTIONS: ${{ inputs.additional_options }}
+
+  CALLER_REPO_PATH: ${{ github.workspace }}/caller
+  ACTIONS_REPO_PATH: ${{ github.workspace }}/actions
+
+  PYTHON_VERSION: 3.8
+  PYTHON_SEMANTIC_RELEASE_VERSION: 7.33.4
+
+jobs:
+  semantic-release:
+    name: Semantic release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    timeout-minutes: 5
+    outputs:
+      old-version: ${{ steps.release.outputs.old-version }}
+      new-version: ${{ steps.release.outputs.new-version }}
+    steps:
+      # Checkout the calling repo
+      - name: Checkout caller
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ env.BRANCH }}
+          token: ${{ secrets.release_token }}
+          fetch-depth: 0
+          path: ${{ env.CALLER_REPO_PATH }}
+      # Checkout h2gopower/github-actions
+      - name: Checkout actions
+        uses: actions/checkout@v3
+        with:
+          repository: h2gopower/github-actions
+          ref: ${{ env.INPUT_GITHUB_ACTIONS_REPO_REF }}
+          token: ${{ secrets.release_token }}
+          path: ${{ env.ACTIONS_REPO_PATH }}
+      # Setup Python
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      # Install python-semantic-release
+      - run: pip install "python-semantic-release==$PYTHON_SEMANTIC_RELEASE_VERSION"
+      # Runs `semantic-release publish` and stores the old and new version numbers as outputs
+      - name: Release
+        id: release
+        working-directory: ${{ env.CALLER_REPO_PATH }}
+        env:
+          PYTHONPATH: ${{ env.ACTIONS_REPO_PATH }}/packages/semantic_release_parser
+          GH_TOKEN: ${{ secrets.release_token }}
+          GIT_COMMITTER_NAME: github-actions
+          GIT_COMMITTER_EMAIL: github-actions@github.com
+        run: |
+          cp "$ACTIONS_REPO_PATH/setup.cfg" .  # get default config
+          old_version="$(semantic-release print-version --current)"
+          # shellcheck disable=SC2086
+          semantic-release publish \
+            -v DEBUG \
+            -D commit_author="$GIT_COMMITTER_NAME <$GIT_COMMITTER_EMAIL>" \
+            -D commit_parser='parser_angular_merge.parse_commit_message' \
+            -D branch="$INPUT_BRANCH" \
+            $INPUT_ADDITIONAL_OPTIONS
+          new_version="$(semantic-release print-version --current)"
+          {
+            printf "old-version=%s\n" "$old_version"
+            printf "new-version=%s\n" "$new_version"
+          } >> "$GITHUB_OUTPUT"

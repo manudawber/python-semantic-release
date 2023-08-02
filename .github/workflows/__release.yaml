@@ -1,0 +1,23 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - CHANGELOG.md
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Release
+    uses: h2gopower/github-actions/.github/workflows/semantic_release.yaml@main
+    permissions: write-all
+    with:
+      github_actions_repo_ref: main
+      branch: main
+    secrets:
+      release_token: ${{ github.token }}
