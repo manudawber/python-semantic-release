@@ -15,7 +15,6 @@ jobs:
   release:
     name: Release
     uses: manudawber/python-semantic-release/.github/workflows/semantic_release.yaml@main
-    permissions: write-all
     with:
       github_actions_repo_ref: main
       branch: main
