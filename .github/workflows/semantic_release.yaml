@@ -82,10 +82,10 @@ jobs:
           PYTHONPATH: ${{ env.ACTIONS_REPO_PATH }}/packages/semantic_release_parser
           GH_TOKEN: ${{ secrets.release_token }}
         run: |
-          cp "$ACTIONS_REPO_PATH/setup.cfg" .  # get default config
+          #cp "$ACTIONS_REPO_PATH/setup.cfg" .  # get default config
           old_version="$(semantic-release --noop version --print)"
           # shellcheck disable=SC2086
-          semantic-release version -vv
+          semantic-release -vv version
           new_version="$(semantic-release --noop version --print)"
           {
             printf "old-version=%s\n" "$old_version"
