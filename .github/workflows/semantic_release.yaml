@@ -85,7 +85,7 @@ jobs:
           #cp "$ACTIONS_REPO_PATH/setup.cfg" .  # get default config
           old_version="$(semantic-release --noop version --print)"
           # shellcheck disable=SC2086
-          semantic-release -vvversion
+          semantic-release -v version
           new_version="$(semantic-release --noop version --print)"
           {
             printf "old-version=%s\n" "$old_version"
