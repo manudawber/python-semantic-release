@@ -1,0 +1,24 @@
+[tool.semantic_release]
+commit_message = "Release v{version}"
+commit_parser = "angular"
+version_variables = ["src/__init__.py:__version__"]
+
+[tool.semantic_release.commit_parser_options]
+allowed_tags = [
+    "build",
+    "chore",
+    "ci",
+    "docs",
+    "feat",
+    "fix",
+    "perf",
+    "style",
+    "refactor",
+    "test",
+]
+minor_tags = ["feat", "refactor"]
+patch_tags = ["fix", "perf"]
+
+[tool.semantic_release.branches.main]
+match = "main"
+prerelease = false

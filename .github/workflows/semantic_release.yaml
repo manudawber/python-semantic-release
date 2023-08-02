@@ -13,10 +13,6 @@ on:
         description: The branch to run releases from.
         default: main
         type: string
-      additional_options:
-        description: 'Additional Common Options for the publish command. Example: --noop'
-        required: false
-        type: string
     secrets:
       release_token:
         description: A GitHub admin token that has repo scope in the target repo.
@@ -38,13 +34,12 @@ on:
 env:
   INPUT_GITHUB_ACTIONS_REPO_REF: ${{ inputs.github_actions_repo_ref }}
   INPUT_BRANCH: ${{ inputs.branch }}
-  INPUT_ADDITIONAL_OPTIONS: ${{ inputs.additional_options }}
 
   CALLER_REPO_PATH: ${{ github.workspace }}/caller
   ACTIONS_REPO_PATH: ${{ github.workspace }}/actions
 
   PYTHON_VERSION: 3.8
-  PYTHON_SEMANTIC_RELEASE_VERSION: 7.33.4
+  PYTHON_SEMANTIC_RELEASE_VERSION: 8.0.4
 
 jobs:
   semantic-release:
@@ -86,18 +81,12 @@ jobs:
         env:
           PYTHONPATH: ${{ env.ACTIONS_REPO_PATH }}/packages/semantic_release_parser
           GH_TOKEN: ${{ secrets.release_token }}
-          GIT_COMMITTER_NAME: github-actions
-          GIT_COMMITTER_EMAIL: github-actions@github.com
         run: |
           cp "$ACTIONS_REPO_PATH/setup.cfg" .  # get default config
-          old_version="$(semantic-release print-version --current)"
+          old_version="$(semantic-release --noop version --print)"
           # shellcheck disable=SC2086
-          semantic-release publish \
-            -v DEBUG \
-            -D commit_author="$GIT_COMMITTER_NAME <$GIT_COMMITTER_EMAIL>" \
-            -D branch="$INPUT_BRANCH" \
-            $INPUT_ADDITIONAL_OPTIONS
-          new_version="$(semantic-release print-version --current)"
+          semantic-release version -vv
+          new_version="$(semantic-release --noop version --print)"
           {
             printf "old-version=%s\n" "$old_version"
             printf "new-version=%s\n" "$new_version"
