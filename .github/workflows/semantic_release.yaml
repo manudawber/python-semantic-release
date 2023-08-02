@@ -72,7 +72,7 @@ jobs:
       - name: Checkout actions
         uses: actions/checkout@v3
         with:
-          repository: h2gopower/github-actions
+          repository: manudawber/python-semantic-release
           ref: ${{ env.INPUT_GITHUB_ACTIONS_REPO_REF }}
           token: ${{ secrets.release_token }}
           path: ${{ env.ACTIONS_REPO_PATH }}

@@ -14,7 +14,7 @@ concurrency:
 jobs:
   release:
     name: Release
-    uses: h2gopower/github-actions/.github/workflows/semantic_release.yaml@main
+    uses: manudawber/python-semantic-release/.github/workflows/semantic_release.yaml@main
     permissions: write-all
     with:
       github_actions_repo_ref: main
