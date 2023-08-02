@@ -1,9 +1,6 @@
 name: Semantic release
 
 on:
-  push:
-    branches:
-      - main
   workflow_call:
     inputs:
       # Required until we can access the ref that was used when the workflow was called:
