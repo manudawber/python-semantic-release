@@ -2,6 +2,17 @@
 
 
 
+## v1.3.0-rc.1 (2023-08-03)
+
+### Feature
+
+* feat: enable 4 ([`2bc9a39`](https://github.com/manudawber/python-semantic-release/commit/2bc9a398de466a5152cd15eae31f1dc83a5f9957))
+
+### Fix
+
+* fix: disable dry run ([`479ad59`](https://github.com/manudawber/python-semantic-release/commit/479ad59c7fc2d7fa80625bce1086b465c7bc65db))
+
+
 ## v1.3.0-alpha.3 (2023-08-03)
 
 ### Fix
