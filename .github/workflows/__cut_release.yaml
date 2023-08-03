@@ -11,7 +11,7 @@ jobs:
           version_short="$(cut -d '.' -f 1,2 <<< "$version")"
           
           # Bump main
-          semantic-release --noop version --minor --prerelease
+          semantic-release --noop version --minor --prerelease --no-vcs-release
           git push
           
           # Create release branch
