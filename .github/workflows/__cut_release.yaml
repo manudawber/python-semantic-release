@@ -1,8 +1,6 @@
 name: Cut release
 on:
   workflow_dispatch:
-env:
-  PYTHON_SEMANTIC_RELEASE_REF: v8.0.4
 jobs:
   cut-release:
     runs-on: ubuntu-latest
@@ -27,7 +25,7 @@ jobs:
             printf "version-short=%s\n" "$version_short"
           } >> "$GITHUB_OUTPUT"
       - name: Bump main
-        uses: python-semantic-release/python-semantic-release@${{ env.PYTHON_SEMANTIC_RELEASE_REF }}
+        uses: python-semantic-release/python-semantic-release@v8.0.4
         with:
           github_token: ${{ secrets.PAT }}
           force: minor
@@ -42,7 +40,7 @@ jobs:
           git checkout -b "$RELEASE_BRANCH"
           #git push -u origin HEAD
       - name: Bump release branch
-        uses: python-semantic-release/python-semantic-release@${{ env.PYTHON_SEMANTIC_RELEASE_REF }}
+        uses: python-semantic-release/python-semantic-release@v8.0.4
         with:
           github_token: ${{ secrets.PAT }}
           # TODO: this causes us to always release on x.y.1, never x.y.0, try find a fix
