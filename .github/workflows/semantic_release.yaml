@@ -88,13 +88,12 @@ jobs:
           GH_TOKEN: ${{ secrets.release_token }}
         run: |
           old_version="$(semantic-release --noop version --print)"
-          echo 1
-          # shellcheck disable=SC2086
-          semantic-release -v \
-            "$([[ "$INPUT_DRY_RUN" = true ]] && echo '--noop')" \
-            version \
-            $INPUT_VERSION_OPTIONS
-          echo 9
+          
+          semantic_release_opts=()
+          [[ "$INPUT_DRY_RUN" = true ]] && semantic_release_opts+=('--noop')
+          read -r -a version_opts <<< "$INPUT_VERSION_OPTIONS"
+          semantic-release "${semantic_release_opts[@]}" version "${version_opts[@]}"
+          
           new_version="$(semantic-release --noop version --print)"
           {
             printf "old-version=%s\n" "$old_version"
