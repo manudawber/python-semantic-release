@@ -6,6 +6,7 @@ on:
       - main
     paths-ignore:
       - CHANGELOG.md
+      - src/__init__.py
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
