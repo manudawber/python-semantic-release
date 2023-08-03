@@ -2,6 +2,13 @@
 
 
 
+## v2.0.0-rc.5 (2023-08-03)
+
+### Fix
+
+* fix: use PAT ([`ef2362f`](https://github.com/manudawber/python-semantic-release/commit/ef2362f618c1653429d90e0665253f5b7113a723))
+
+
 ## v2.0.0-rc.4 (2023-08-03)
 
 ### Feature
