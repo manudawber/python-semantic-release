@@ -1,0 +1,21 @@
+name: Cut release
+on:
+  workflow_dispatch:
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          # Get the next release version
+          version="$(semantic-release --noop version --print 2> /dev/null)"
+          version_short="$(cut -d '.' -f 1,2 <<< $version)"
+          
+          # Bump main
+          semantic-release --noop version --minor --prerelease
+          git push
+          
+          # Create release branch
+          git checkout -b "release/$version_short"
+          
+          # Create release
+          semantic-release --noop version
