@@ -8,7 +8,7 @@ jobs:
       - run: |
           # Get the next release version
           version="$(semantic-release --noop version --print 2> /dev/null)"
-          version_short="$(cut -d '.' -f 1,2 <<< $version)"
+          version_short="$(cut -d '.' -f 1,2 <<< "$version")"
           
           # Bump main
           semantic-release --noop version --minor --prerelease
