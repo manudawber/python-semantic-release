@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - main
+      - release/*
     paths-ignore:
       - CHANGELOG.md
       - src/__init__.py
@@ -20,5 +20,6 @@ jobs:
       contents: write
     with:
       github_actions_repo_ref: main
+      version_options: --prerelease --no-vcs-release
     secrets:
       release_token: ${{ secrets.PAT }}

@@ -9,10 +9,14 @@ on:
         description: The [h2gopower/github-actions](https://github.com/h2gopower/github-actions) branch, tag or SHA to checkout.
         default: main
         type: string
-      branch:
-        description: The branch to run releases from.
-        default: main
+      version_options:
+        description: Additional options to pass to the `semantic-release version` command.
+        required: false
         type: string
+      dry_run:
+        description: Runs python-semantic-release with the `--noop` flag.
+        default: false
+        type: boolean
     secrets:
       release_token:
         description: A GitHub admin token that has repo scope in the target repo.
@@ -33,7 +37,8 @@ on:
 
 env:
   INPUT_GITHUB_ACTIONS_REPO_REF: ${{ inputs.github_actions_repo_ref }}
-  INPUT_BRANCH: ${{ inputs.branch }}
+  VERSION_OPTIONS: ${{ inputs.version_options }}
+  DRY_RUN: ${{ inputs.dry_run }}
 
   CALLER_REPO_PATH: ${{ github.workspace }}/caller
   ACTIONS_REPO_PATH: ${{ github.workspace }}/actions
@@ -85,7 +90,10 @@ jobs:
           #cp "$ACTIONS_REPO_PATH/setup.cfg" .  # get default config
           old_version="$(semantic-release --noop version --print)"
           # shellcheck disable=SC2086
-          semantic-release -v version
+          semantic-release -v \
+            "$([[ "$DRY_RUN" = true ]] && echo '--noop')" \
+            version \
+            "$VERSION_OPTIONS"
           new_version="$(semantic-release --noop version --print)"
           {
             printf "old-version=%s\n" "$old_version"
