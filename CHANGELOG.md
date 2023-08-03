@@ -2,6 +2,13 @@
 
 
 
+## v2.0.0-rc.6 (2023-08-03)
+
+### Fix
+
+* fix: make proper release ([`9d45564`](https://github.com/manudawber/python-semantic-release/commit/9d455647652e71479bc4a92c49ce09dcbbca733a))
+
+
 ## v2.0.0-rc.5 (2023-08-03)
 
 ### Fix
