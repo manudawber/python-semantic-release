@@ -2,6 +2,13 @@
 
 
 
+## v1.3.0-alpha.3 (2023-08-03)
+
+### Fix
+
+* fix: disable vcs release ([`ee4b446`](https://github.com/manudawber/python-semantic-release/commit/ee4b4461ca09d1738f8f66481abe589187cf461c))
+
+
 ## v1.3.0-alpha.2 (2023-08-03)
 
 ### Feature
