@@ -2,6 +2,13 @@
 
 
 
+## v1.3.0-rc.2 (2023-08-03)
+
+### Feature
+
+* feat: redirect stderr to null ([`e5da4ca`](https://github.com/manudawber/python-semantic-release/commit/e5da4cae782c35edfb1eeecd1d11e5da1d91bf0c))
+
+
 ## v1.3.0-rc.1 (2023-08-03)
 
 ### Feature
