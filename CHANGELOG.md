@@ -2,6 +2,13 @@
 
 
 
+## v0.7.1 (2023-08-03)
+
+### Fix
+
+* fix: test patch ([`f29a9c4`](https://github.com/manudawber/python-semantic-release/commit/f29a9c4aa1b86822c3f3223036d894be3623ae6d))
+
+
 ## v0.7.0 (2023-08-02)
 
 ### Feature
