@@ -2,6 +2,15 @@
 
 
 
+## v1.0.0 (2023-08-03)
+
+### Breaking
+
+* feat!: test major
+
+incompatible upgrade ([`5454d9c`](https://github.com/manudawber/python-semantic-release/commit/5454d9c4d16dcfa298a2872ee750f6e0f496ac4c))
+
+
 ## v0.8.0 (2023-08-03)
 
 ### Feature
