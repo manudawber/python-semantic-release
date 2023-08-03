@@ -87,14 +87,14 @@ jobs:
           PYTHONPATH: ${{ env.ACTIONS_REPO_PATH }}/packages/semantic_release_parser
           GH_TOKEN: ${{ secrets.release_token }}
         run: |
-          old_version="$(semantic-release --noop version --print)"
+          old_version="$(semantic-release --noop version --print 2> /dev/null)"
           
           semantic_release_opts=()
           [[ "$INPUT_DRY_RUN" = true ]] && semantic_release_opts+=('--noop')
           read -r -a version_opts <<< "$INPUT_VERSION_OPTIONS"
           semantic-release "${semantic_release_opts[@]}" version "${version_opts[@]}"
           
-          new_version="$(semantic-release --noop version --print)"
+          new_version="$(semantic-release --noop version --print 2> /dev/null)"
           {
             printf "old-version=%s\n" "$old_version"
             printf "new-version=%s\n" "$new_version"
