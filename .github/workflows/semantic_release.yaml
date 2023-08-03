@@ -11,7 +11,7 @@ on:
         type: string
       version_options:
         description: Additional options to pass to the `semantic-release version` command.
-        required: false
+        default: ''
         type: string
       dry_run:
         description: Runs python-semantic-release with the `--noop` flag.
