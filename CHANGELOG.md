@@ -2,6 +2,13 @@
 
 
 
+## v2.0.0-rc.9 (2023-08-03)
+
+### Fix
+
+* fix: try setting token permissions ([`4e4b092`](https://github.com/manudawber/python-semantic-release/commit/4e4b092bfd990cd2a8ad76313da40019de3b7ac2))
+
+
 ## v2.0.0-rc.8 (2023-08-03)
 
 ### Fix
