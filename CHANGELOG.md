@@ -2,6 +2,29 @@
 
 
 
+## v1.3.0-alpha.1 (2023-08-03)
+
+### Feature
+
+* feat: enable trunk release ([`a8dc325`](https://github.com/manudawber/python-semantic-release/commit/a8dc3253cc512595dd5c608c5d2da8a2f44ffb34))
+
+* feat: update prerelease tokens ([`3fa2993`](https://github.com/manudawber/python-semantic-release/commit/3fa2993a0d7339e90911bf17637d0582f6320230))
+
+* feat: reset ([`5454076`](https://github.com/manudawber/python-semantic-release/commit/5454076514884eef3c328a5197df62193dc2836a))
+
+### Fix
+
+* fix: trigger no release 3 ([`021a8d8`](https://github.com/manudawber/python-semantic-release/commit/021a8d898784f028cd26554c0cec50ec32f4013d))
+
+* fix: trigger no release 2 ([`5801de4`](https://github.com/manudawber/python-semantic-release/commit/5801de4e3e93ce7aaade89e8bbe98605e1d61eab))
+
+* fix: trigger no release 2 ([`e100ee4`](https://github.com/manudawber/python-semantic-release/commit/e100ee4eea1d954e25eef89402905c0dafe57cd1))
+
+* fix: trigger no release ([`e8c2a3a`](https://github.com/manudawber/python-semantic-release/commit/e8c2a3a4fb7f63ee742d896fdb225778e1880901))
+
+* fix: trigger no release ([`20b17b8`](https://github.com/manudawber/python-semantic-release/commit/20b17b81631f12bec914fe518050b92715abbe50))
+
+
 ## v1.0.0 (2023-08-03)
 
 ### Breaking
