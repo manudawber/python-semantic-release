@@ -2,6 +2,17 @@
 
 
 
+## v2.0.0-rc.1 (2023-08-03)
+
+### Breaking
+
+* feat!: test breaking + prerelease ([`542c1a7`](https://github.com/manudawber/python-semantic-release/commit/542c1a787fbc8f5edca8a763dae7123b573309ed))
+
+### Unknown
+
+* Merge branch &#39;main&#39; of github.com:manudawber/python-semantic-release ([`a80e41a`](https://github.com/manudawber/python-semantic-release/commit/a80e41a07824b7a39dd69c650899aa2870ae6f76))
+
+
 ## v1.3.0-rc.2 (2023-08-03)
 
 ### Feature
