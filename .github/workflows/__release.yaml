@@ -13,13 +13,27 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  release:
-    name: Release
-    uses: manudawber/python-semantic-release/.github/workflows/semantic_release.yaml@main
-    permissions:
-      contents: write
-    with:
-      github_actions_repo_ref: main
-      version_options: --no-vcs-release
-    secrets:
-      release_token: ${{ secrets.PAT }}
+  release_action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Bump main
+        uses: python-semantic-release/python-semantic-release@v8.0.4
+        with:
+          github_token: ${{ secrets.PAT }}
+          push: true
+          changelog: false
+          vcs_release: false
+#  release:
+#    name: Release
+#    uses: manudawber/python-semantic-release/.github/workflows/semantic_release.yaml@main
+#    permissions:
+#      contents: write
+#    with:
+#      github_actions_repo_ref: main
+#      version_options: --no-vcs-release
+#    secrets:
+#      release_token: ${{ secrets.PAT }}

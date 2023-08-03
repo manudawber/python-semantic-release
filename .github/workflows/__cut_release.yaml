@@ -8,6 +8,8 @@ jobs:
       id-token: write
       contents: write
     steps:
+      - if: github.event_name == 'workflow_dispatch' && github.ref != 'refs/heads/main'
+        run: echo "This workflow may only be run from `main`"; exit 1
       - name: Checkout main
         uses: actions/checkout@v3
         with:
@@ -27,6 +29,8 @@ jobs:
           github_token: ${{ secrets.PAT }}
           force: minor
           prerelease: true
+          push: true
+          changelog: false
           vcs_release: false
       - name: Create release branch
         env:
