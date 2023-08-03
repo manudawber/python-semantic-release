@@ -2,6 +2,17 @@
 
 
 
+## v2.0.0-rc.2 (2023-08-03)
+
+### Feature
+
+* feat: new &#34;cut release&#34; workflow ([`6c86e36`](https://github.com/manudawber/python-semantic-release/commit/6c86e3694fe3ee979d149608570054a4c0bb78a4))
+
+### Fix
+
+* fix: linting ([`6bb5699`](https://github.com/manudawber/python-semantic-release/commit/6bb5699bfd08085cb835cd525e461685f61ea85f))
+
+
 ## v2.0.0-rc.1 (2023-08-03)
 
 ### Breaking
