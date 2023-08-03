@@ -2,6 +2,13 @@
 
 
 
+## v2.0.0-rc.3 (2023-08-03)
+
+### Fix
+
+* fix: no vcs release ([`1e59ab9`](https://github.com/manudawber/python-semantic-release/commit/1e59ab9e25c66c6fbd3f79dfb2f0e5d10d4826a3))
+
+
 ## v2.0.0-rc.2 (2023-08-03)
 
 ### Feature
