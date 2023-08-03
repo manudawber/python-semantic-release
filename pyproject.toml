@@ -19,6 +19,12 @@ allowed_tags = [
 minor_tags = ["feat", "refactor"]
 patch_tags = ["fix", "perf"]
 
+[tool.semantic_release.branches.main]
+match = "main"
+prerelease = true
+prerelease_token = "alpha"
+
 [tool.semantic_release.branches.release]
 match = "release/.+"
 prerelease = false
+prerelease_token = "beta"
