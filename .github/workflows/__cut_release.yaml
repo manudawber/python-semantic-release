@@ -1,8 +1,6 @@
 name: Cut release
 on:
   workflow_dispatch:
-env:
-  GH_TOKEN: ${{ secrets.PAT }}
 jobs:
   cut-release:
     runs-on: ubuntu-latest
@@ -23,6 +21,7 @@ jobs:
       - name: Bump main
         uses: python-semantic-release/python-semantic-release@v8.0.4
         with:
+          github_token: ${{ secrets.PAT }}
           force: minor
           prerelease: true
           vcs_release: false
@@ -34,3 +33,5 @@ jobs:
           #git push -u origin HEAD
       - name: Bump release branch
         uses: python-semantic-release/python-semantic-release@v8.0.4
+        with:
+          github_token: ${{ secrets.PAT }}
