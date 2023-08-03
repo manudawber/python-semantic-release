@@ -20,5 +20,6 @@ jobs:
       contents: write
     with:
       github_actions_repo_ref: main
+      version_options: --no-vcs-release
     secrets:
       release_token: ${{ secrets.PAT }}
