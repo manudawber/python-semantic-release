@@ -2,6 +2,13 @@
 
 
 
+## v2.0.0-rc.8 (2023-08-03)
+
+### Fix
+
+* fix: apply token correctly ([`089b41e`](https://github.com/manudawber/python-semantic-release/commit/089b41e3d1f956365c2cf6fb401a017a1e9bde7a))
+
+
 ## v2.0.0-rc.7 (2023-08-03)
 
 ### Fix
