@@ -2,6 +2,13 @@
 
 
 
+## v2.0.0-rc.7 (2023-08-03)
+
+### Fix
+
+* fix: disable noop ([`2e73698`](https://github.com/manudawber/python-semantic-release/commit/2e73698d22f8ed66baed4557dfdafe9c0b4ca47c))
+
+
 ## v2.0.0-rc.6 (2023-08-03)
 
 ### Fix
