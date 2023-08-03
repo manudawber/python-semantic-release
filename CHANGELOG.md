@@ -2,6 +2,19 @@
 
 
 
+## v1.3.0-alpha.2 (2023-08-03)
+
+### Feature
+
+* feat: bump 2 ([`64500da`](https://github.com/manudawber/python-semantic-release/commit/64500daa07bbb01baea7cf072696f3252be50905))
+
+### Fix
+
+* fix: bump 1 ([`64eb078`](https://github.com/manudawber/python-semantic-release/commit/64eb07839edf60e9695960e3b5fe3e5fe37fcfc2))
+
+* fix: bump 1 ([`6c3f05e`](https://github.com/manudawber/python-semantic-release/commit/6c3f05ef141fb9c78f48809f7919fddba241e9dd))
+
+
 ## v1.3.0-alpha.1 (2023-08-03)
 
 ### Feature
