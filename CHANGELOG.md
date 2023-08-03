@@ -2,6 +2,13 @@
 
 
 
+## v0.8.0 (2023-08-03)
+
+### Feature
+
+* feat: test minor ([`40b8108`](https://github.com/manudawber/python-semantic-release/commit/40b8108f1ab010f5edeeaccf768674c8a031e5de))
+
+
 ## v0.7.1 (2023-08-03)
 
 ### Fix
