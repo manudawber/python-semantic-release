@@ -11,7 +11,7 @@ on:
         type: string
       version_options:
         description: Additional options to pass to the `semantic-release version` command.
-        default: ''
+        required: false
         type: string
       dry_run:
         description: Runs python-semantic-release with the `--noop` flag.
@@ -37,8 +37,8 @@ on:
 
 env:
   INPUT_GITHUB_ACTIONS_REPO_REF: ${{ inputs.github_actions_repo_ref }}
-  VERSION_OPTIONS: ${{ inputs.version_options }}
-  DRY_RUN: ${{ inputs.dry_run }}
+  INPUT_VERSION_OPTIONS: ${{ inputs.version_options }}
+  INPUT_DRY_RUN: ${{ inputs.dry_run }}
 
   CALLER_REPO_PATH: ${{ github.workspace }}/caller
   ACTIONS_REPO_PATH: ${{ github.workspace }}/actions
@@ -87,13 +87,14 @@ jobs:
           PYTHONPATH: ${{ env.ACTIONS_REPO_PATH }}/packages/semantic_release_parser
           GH_TOKEN: ${{ secrets.release_token }}
         run: |
-          #cp "$ACTIONS_REPO_PATH/setup.cfg" .  # get default config
           old_version="$(semantic-release --noop version --print)"
+          echo 1
           # shellcheck disable=SC2086
           semantic-release -v \
-            "$([[ "$DRY_RUN" = true ]] && echo '--noop')" \
+            "$([[ "$INPUT_DRY_RUN" = true ]] && echo '--noop')" \
             version \
-            "$VERSION_OPTIONS"
+            $INPUT_VERSION_OPTIONS
+          echo 9
           new_version="$(semantic-release --noop version --print)"
           {
             printf "old-version=%s\n" "$old_version"
