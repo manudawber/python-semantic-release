@@ -2,6 +2,13 @@
 
 
 
+## v2.0.0-rc.4 (2023-08-03)
+
+### Feature
+
+* feat: use gh action ([`a816b69`](https://github.com/manudawber/python-semantic-release/commit/a816b690ab158390c09ee0dec0bf138caa7f3043))
+
+
 ## v2.0.0-rc.3 (2023-08-03)
 
 ### Fix
