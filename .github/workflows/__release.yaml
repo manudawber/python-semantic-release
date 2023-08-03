@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - null
+      - main0
     paths-ignore:
       - CHANGELOG.md
       - src/__init__.py
