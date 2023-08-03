@@ -1,6 +1,8 @@
 name: Cut release
 on:
   workflow_dispatch:
+env:
+  GH_TOKEN: ${{ secrets.PAT }}
 jobs:
   cut-release:
     runs-on: ubuntu-latest
@@ -26,9 +28,10 @@ jobs:
           prerelease: true
           vcs_release: false
       - name: Create release branch
+        env:
+          RELEASE_BRANCH: release/${{ steps.get-version.outputs.version-short }}
         run: |
-          release_branch="release/$version_short"
-          git checkout -b "$release_branch"
+          git checkout -b "$RELEASE_BRANCH"
           #git push -u origin HEAD
       - name: Bump release branch
         uses: python-semantic-release/python-semantic-release@v8.0.4
