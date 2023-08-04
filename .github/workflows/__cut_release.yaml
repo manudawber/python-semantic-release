@@ -24,11 +24,11 @@ jobs:
           push: true
           changelog: true
           vcs_release: true
-      - name: Create release branch
-        env:
-          VERSION_TAG: ${{ steps.release.outputs.version-tag }}
-        run: |
-          version_short="$(cut -d '.' -f 1,2 <<< "$VERSION_TAG")"
-          release_branch="release/$version_short"
-          git checkout -b "$release_branch"
-          git push -u origin HEAD
+#      - name: Create release branch
+#        env:
+#          VERSION_TAG: ${{ steps.release.outputs.version-tag }}
+#        run: |
+#          version_short="$(cut -d '.' -f 1,2 <<< "$VERSION_TAG")"
+#          release_branch="release/$version_short"
+#          git checkout -b "$release_branch"
+#          git push -u origin HEAD
