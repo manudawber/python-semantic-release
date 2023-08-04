@@ -2,6 +2,150 @@
 
 
 
+## v2.0.0 (2023-08-04)
+
+
+## v2.7.0-rc.5 (2023-08-04)
+
+### Fix
+
+* fix: don&#39;t set prerelease in pyproject.toml ([`da9a2fe`](https://github.com/manudawber/python-semantic-release/commit/da9a2fe63f09eaa692ca42bc69f921ad0e100af9))
+
+
+## v2.7.0-rc.4 (2023-08-04)
+
+### Fix
+
+* fix: 11 ([`0992b7b`](https://github.com/manudawber/python-semantic-release/commit/0992b7b1b785cedc46e59e82176270038ec41bc2))
+
+
+## v2.7.0-rc.3 (2023-08-04)
+
+### Fix
+
+* fix: 10 ([`0f98d51`](https://github.com/manudawber/python-semantic-release/commit/0f98d5155f6b683e40f80586968696c1716beca2))
+
+
+## v2.7.0-rc.2 (2023-08-04)
+
+### Feature
+
+* feat: try new release workflow ([`552b042`](https://github.com/manudawber/python-semantic-release/commit/552b042d866374b6fc22cc784802d87d01cd11a9))
+
+
+## v2.7.0-rc.1 (2023-08-04)
+
+
+## v2.6.0-rc.3 (2023-08-04)
+
+### Feature
+
+* feat: 9 ([`cd41e02`](https://github.com/manudawber/python-semantic-release/commit/cd41e0256b103dbd1de82745a205fa9034b908ac))
+
+
+## v2.6.0-rc.2 (2023-08-04)
+
+### Fix
+
+* fix: 8 ([`326da46`](https://github.com/manudawber/python-semantic-release/commit/326da469cee50be3a7c05819b701d4d1c7f67f5e))
+
+* fix: 7 ([`9b536b8`](https://github.com/manudawber/python-semantic-release/commit/9b536b83e4642b548e79fa74f8b6f70c554cf761))
+
+
+## v2.6.0-rc.1 (2023-08-04)
+
+
+## v2.5.0-rc.2 (2023-08-04)
+
+### Feature
+
+* feat: 6 ([`0e1ca60`](https://github.com/manudawber/python-semantic-release/commit/0e1ca60600ec2fac53a66bb4072936968faa05f7))
+
+### Fix
+
+* fix: 5 ([`4ac8c45`](https://github.com/manudawber/python-semantic-release/commit/4ac8c45be3db6e38ef9081140b40c11027c1ce9e))
+
+* fix: change bump order ([`8a20e51`](https://github.com/manudawber/python-semantic-release/commit/8a20e5156ebd7c7d1cbb1e59980df87b9856f6fc))
+
+
+## v2.5.0-rc.1 (2023-08-03)
+
+
+## v2.4.0-rc.3 (2023-08-03)
+
+### Fix
+
+* fix: version bug ([`46bb245`](https://github.com/manudawber/python-semantic-release/commit/46bb2458454e68a47a3452da3e4474e7e8cf3c35))
+
+
+## v2.4.0-rc.2 (2023-08-03)
+
+### Fix
+
+* fix: make release branch cuts work ([`b8959a2`](https://github.com/manudawber/python-semantic-release/commit/b8959a2c9bae7e9ef56e6ca3fffcfe40d2993192))
+
+
+## v2.4.0-rc.1 (2023-08-03)
+
+
+## v2.3.0-rc.3 (2023-08-03)
+
+### Fix
+
+* fix: 4 ([`6c290c6`](https://github.com/manudawber/python-semantic-release/commit/6c290c6224f2bdbebd447c64f73edf7e86bc380d))
+
+
+## v2.3.0-rc.2 (2023-08-03)
+
+### Fix
+
+* fix: 3 ([`2eba93d`](https://github.com/manudawber/python-semantic-release/commit/2eba93dbf599084eae6e485493a455a0db353b7e))
+
+* fix: 2 ([`b77d396`](https://github.com/manudawber/python-semantic-release/commit/b77d3966e1572a65f9b99a76f09556177abebf9d))
+
+* fix: 1 ([`d24501f`](https://github.com/manudawber/python-semantic-release/commit/d24501f21bd5645148b729ccd4a81dc506191497))
+
+
+## v2.3.0-rc.1 (2023-08-03)
+
+
+## v2.2.0-rc.4 (2023-08-03)
+
+### Fix
+
+* fix: 4 ([`0a2c71c`](https://github.com/manudawber/python-semantic-release/commit/0a2c71c6656ad87b6d690fdeaa5b7c858cf90bfd))
+
+
+## v2.2.0-rc.3 (2023-08-03)
+
+### Feature
+
+* feat: 2 ([`d032709`](https://github.com/manudawber/python-semantic-release/commit/d0327095ab2d109dc5760c1819e2a8470dffaa8e))
+
+
+## v2.2.0-rc.2 (2023-08-03)
+
+### Feature
+
+* feat: 2 ([`fbbd0d8`](https://github.com/manudawber/python-semantic-release/commit/fbbd0d8a506b395af7389dd31370b97a285d3c77))
+
+### Fix
+
+* fix: 1 ([`4b15a56`](https://github.com/manudawber/python-semantic-release/commit/4b15a5634cf35f7943f508ce6cdf76a0f99d17ed))
+
+
+## v2.2.0-rc.1 (2023-08-03)
+
+
+## v2.1.0-rc.2 (2023-08-03)
+
+### Fix
+
+* fix: adjust token permissions ([`ad9c956`](https://github.com/manudawber/python-semantic-release/commit/ad9c956cabb4e6a2cf63e6d9c0c14f6c13e48a40))
+
+* fix: only push changelog for proper releases ([`39e2a09`](https://github.com/manudawber/python-semantic-release/commit/39e2a09beac852435263d64739e408cfcceab026))
+
+
 ## v2.1.0-rc.1 (2023-08-03)
 
 
