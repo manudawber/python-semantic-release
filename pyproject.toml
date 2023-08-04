@@ -21,8 +21,6 @@ patch_tags = ["fix", "perf"]
 
 [tool.semantic_release.branches.main]
 match = "main"
-prerelease = true
 
 [tool.semantic_release.branches.release]
 match = "release/.+"
-prerelease = false
