@@ -1,7 +1,19 @@
-# CHANGELOG test
+# CHANGELOG
 
 
 
+
+## v1.1.0 (2023-08-04)
+
+### Feature
+
+* feat: commit changelog but don&#39;t make a release ([`e54a641`](https://github.com/manudawber/python-semantic-release/commit/e54a6410527f2410e2b238f970ece1f50ede82fe))
+
+* feat: new changelog template ([`00bef60`](https://github.com/manudawber/python-semantic-release/commit/00bef608c311beced01e40731b69f79e905ebde3))
+
+### Fix
+
+* fix: 2 ([`5ccec9b`](https://github.com/manudawber/python-semantic-release/commit/5ccec9b27fef404ecd00f2eaba41d5b176018c2d))
 
 ## v1.1.0-rc.1 (2023-08-04)
 
