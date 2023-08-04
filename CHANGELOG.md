@@ -1,9 +1,15 @@
-# CHANGELOG
+# CHANGELOG test
 
 
+
+
+## v1.1.0-rc.1 (2023-08-04)
+
+### Feature
+
+* feat: enable release branches ([`4d53233`](https://github.com/manudawber/python-semantic-release/commit/4d53233204d8f6e5b263589491958aad9202ecff))
 
 ## v1.0.1 (2023-08-04)
-
 
 ## v1.0.1-rc.1 (2023-08-04)
 
@@ -11,16 +17,13 @@
 
 * fix: 1 ([`ef515c2`](https://github.com/manudawber/python-semantic-release/commit/ef515c2d60945859aae9f721ca8bd2b77e8fe884))
 
-
 ## v1.0.0 (2023-08-04)
-
 
 ## v1.0.0-rc.2 (2023-08-04)
 
 ### Fix
 
 * fix: disable release branches ([`ebddebd`](https://github.com/manudawber/python-semantic-release/commit/ebddebda192c001b624f4fb5b1fefedddf44f121))
-
 
 ## v1.0.0-rc.1 (2023-08-04)
 
