@@ -3,6 +3,12 @@
 
 
 
+## v1.1.2 (2023-08-04)
+
+### Fix
+
+* fix: correctly create release branch ([`89e5d08`](https://github.com/manudawber/python-semantic-release/commit/89e5d0849d1b3e1874632d8ab9af77f345e03693))
+
 ## v1.1.1 (2023-08-04)
 
 ### Fix
