@@ -3,6 +3,14 @@
 
 
 
+## v1.1.1 (2023-08-04)
+
+### Fix
+
+* fix: 3 ([`690b1b9`](https://github.com/manudawber/python-semantic-release/commit/690b1b900610d612107213f34539b77b10b8849d))
+
+* fix: disabled release workflow ([`f8c221c`](https://github.com/manudawber/python-semantic-release/commit/f8c221c66395b23b9b06076168bdc70576bb9162))
+
 ## v1.1.0 (2023-08-04)
 
 ### Feature
