@@ -2,6 +2,16 @@
 
 
 
+## v1.0.1 (2023-08-04)
+
+
+## v1.0.1-rc.1 (2023-08-04)
+
+### Fix
+
+* fix: 1 ([`ef515c2`](https://github.com/manudawber/python-semantic-release/commit/ef515c2d60945859aae9f721ca8bd2b77e8fe884))
+
+
 ## v1.0.0 (2023-08-04)
 
 
