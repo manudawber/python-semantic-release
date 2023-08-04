@@ -24,15 +24,6 @@ jobs:
             printf "version=%s\n" "$version"
             printf "version-short=%s\n" "$version_short"
           } >> "$GITHUB_OUTPUT"
-      - name: Bump main
-        uses: python-semantic-release/python-semantic-release@v8.0.4
-        with:
-          github_token: ${{ secrets.PAT }}
-          force: minor
-          prerelease: true
-          push: true
-          changelog: false
-          vcs_release: false
       - name: Create release branch
         env:
           RELEASE_BRANCH: release/${{ steps.get-version.outputs.version-short }}
@@ -45,3 +36,14 @@ jobs:
           github_token: ${{ secrets.PAT }}
           # TODO: this causes us to always release on x.y.1, never x.y.0, try find a fix
           force: patch
+      - name: Checkout main
+        run: git checkout main
+      - name: Bump main
+        uses: python-semantic-release/python-semantic-release@v8.0.4
+        with:
+          github_token: ${{ secrets.PAT }}
+          force: minor
+          prerelease: true
+          push: true
+          changelog: false
+          vcs_release: false
