@@ -3,6 +3,12 @@
 
 
 
+## v1.2.1 (2023-08-07)
+
+### Fix
+
+* fix: 8 ([`ee5cf01`](https://github.com/manudawber/python-semantic-release/commit/ee5cf013767409da4e8e48d3820a29c327ec3f28))
+
 ## v1.2.0 (2023-08-07)
 
 ### Feature
