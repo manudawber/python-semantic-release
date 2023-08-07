@@ -3,6 +3,12 @@
 
 
 
+## v2.3.7 (2023-08-07)
+
+### Fix
+
+* fix: set git user config 2 ([`00b04da`](https://github.com/manudawber/python-semantic-release/commit/00b04da68d0792ad043c8a142c5a1205816143e0))
+
 ## v2.3.6 (2023-08-07)
 
 ### Fix
