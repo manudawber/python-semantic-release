@@ -3,6 +3,12 @@
 
 
 
+## v2.3.4 (2023-08-07)
+
+### Fix
+
+* fix: increase token permissions ([`d03982e`](https://github.com/manudawber/python-semantic-release/commit/d03982ee9831acc1cc537064c8435eb787b927b4))
+
 ## v2.3.3 (2023-08-07)
 
 ### Fix
