@@ -3,6 +3,12 @@
 
 
 
+## v1.1.3 (2023-08-07)
+
+### Fix
+
+* fix: 4 ([`b1b8c78`](https://github.com/manudawber/python-semantic-release/commit/b1b8c785a933aea024ec96dc91b80312f7913f54))
+
 ## v1.1.2 (2023-08-04)
 
 ### Fix
