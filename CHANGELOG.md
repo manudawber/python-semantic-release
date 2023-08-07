@@ -3,6 +3,12 @@
 
 
 
+## v2.3.3 (2023-08-07)
+
+### Fix
+
+* fix: test trigger of deploy again 2 ([`bf9bf85`](https://github.com/manudawber/python-semantic-release/commit/bf9bf85066eb72d8ace6bd3104d07574de0071f5))
+
 ## v2.3.2 (2023-08-07)
 
 ### Fix
