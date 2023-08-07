@@ -3,6 +3,12 @@
 
 
 
+## v2.3.5 (2023-08-07)
+
+### Fix
+
+* fix: use old trigger method ([`0a7d4ad`](https://github.com/manudawber/python-semantic-release/commit/0a7d4add69fcc4ccbbabbbcd2896371e30f0d595))
+
 ## v2.3.4 (2023-08-07)
 
 ### Fix
