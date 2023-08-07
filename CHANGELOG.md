@@ -3,6 +3,16 @@
 
 
 
+## v1.2.0 (2023-08-07)
+
+### Feature
+
+* feat: 6 ([`450395e`](https://github.com/manudawber/python-semantic-release/commit/450395eb5462535e3abd8c038acab5beecd1737b))
+
+### Fix
+
+* fix: 7 ([`2a83e27`](https://github.com/manudawber/python-semantic-release/commit/2a83e277a0a1d40ea07ee5988e329b2448df4818))
+
 ## v1.1.4 (2023-08-07)
 
 ### Fix
