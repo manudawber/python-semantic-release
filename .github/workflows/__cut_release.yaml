@@ -41,6 +41,7 @@ jobs:
         env:
           RELEASE_BRANCH: ${{ steps.create-release-branch.outputs.release-branch }}
         with:
+          github-token: ${{ secrets.PAT }}
           script: |
             const RELEASE_BRANCH = process.env.RELEASE_BRANCH
             github.rest.actions.createWorkflowDispatch({
