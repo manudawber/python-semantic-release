@@ -3,6 +3,12 @@
 
 
 
+## v2.2.0 (2023-08-07)
+
+### Feature
+
+* feat: trigger deploy after creating release branch ([`7e159f3`](https://github.com/manudawber/python-semantic-release/commit/7e159f330ba965db6815aece40a0c67be246a891))
+
 ## v2.1.0 (2023-08-07)
 
 ### Feature
