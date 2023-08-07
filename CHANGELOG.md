@@ -3,6 +3,12 @@
 
 
 
+## v2.3.0 (2023-08-07)
+
+### Feature
+
+* feat: test deploy via automated workflow dispatch ([`b47daee`](https://github.com/manudawber/python-semantic-release/commit/b47daee1acc58f57fd496047c76a2dc7cb3d384b))
+
 ## v2.2.0 (2023-08-07)
 
 ### Feature
