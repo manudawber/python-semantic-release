@@ -3,6 +3,12 @@
 
 
 
+## v2.3.1 (2023-08-07)
+
+### Fix
+
+* fix: provide correct auth ([`63e0d14`](https://github.com/manudawber/python-semantic-release/commit/63e0d149fd63e7c29cdaa4c8bd886715e8cfca4a))
+
 ## v2.3.0 (2023-08-07)
 
 ### Feature
