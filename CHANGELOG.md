@@ -3,6 +3,12 @@
 
 
 
+## v1.1.4 (2023-08-07)
+
+### Fix
+
+* fix: 5 ([`e51fd90`](https://github.com/manudawber/python-semantic-release/commit/e51fd90fca68b0e3d93ab498af42a5a3b07266c9))
+
 ## v1.1.3 (2023-08-07)
 
 ### Fix
