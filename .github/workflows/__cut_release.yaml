@@ -36,17 +36,24 @@ jobs:
           #git commit --allow-empty -m "Deploy $VERSION_TAG to staging"
           git push -u origin HEAD
           echo "release-branch=$release_branch" >> "$GITHUB_OUTPUT"
-      - name: Trigger deployment
-        uses: actions/github-script@v6
-        env:
+      - env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
           RELEASE_BRANCH: ${{ steps.create-release-branch.outputs.release-branch }}
-        with:
-          github-token: ${{ secrets.PAT }}
-          script: |
-            const RELEASE_BRANCH = process.env.RELEASE_BRANCH
-            github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: '__deploy_stg.yaml',
-              ref: RELEASE_BRANCH,
-            })
+        run: |
+          echo "$GITHUB_TOKEN" > .githubtoken
+          gh auth login --with-token < .githubtoken
+          gh workflow run __deploy_stg.yaml --ref "$RELEASE_BRANCH"
+#      - name: Trigger deployment
+#        uses: actions/github-script@v6
+#        env:
+#          RELEASE_BRANCH: ${{ steps.create-release-branch.outputs.release-branch }}
+#        with:
+#          github-token: ${{ secrets.PAT }}
+#          script: |
+#            const RELEASE_BRANCH = process.env.RELEASE_BRANCH
+#            github.rest.actions.createWorkflowDispatch({
+#              owner: context.repo.owner,
+#              repo: context.repo.repo,
+#              workflow_id: '__deploy_stg.yaml',
+#              ref: RELEASE_BRANCH,
+#            })
