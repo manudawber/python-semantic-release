@@ -3,6 +3,12 @@
 
 
 
+## v2.0.0 (2023-08-07)
+
+### Breaking
+
+* feat!: 10 ([`e8df3ba`](https://github.com/manudawber/python-semantic-release/commit/e8df3ba5643779fd03b6f5cfe23ce4b250f32a4c))
+
 ## v1.3.0 (2023-08-07)
 
 ### Feature
