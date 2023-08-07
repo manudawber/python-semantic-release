@@ -1,25 +1,19 @@
-name: Release
+name: Deploy to Staging
 
 on:
+  workflow_dispatch:
   push:
     branches:
-      - nothing
-    paths-ignore:
-      - CHANGELOG.md
-      - src/__init__.py
+      - release/**
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
-  release:
-    name: Release
-    uses: manudawber/python-semantic-release/.github/workflows/semantic_release.yaml@main
+  release_action:
+    runs-on: ubuntu-latest
     permissions:
       contents: write
-    with:
-      github_actions_repo_ref: main
-      version_options: --prerelease --no-vcs-release
-    secrets:
-      release_token: ${{ secrets.PAT }}
+    steps:
+      - run: echo Hello world
