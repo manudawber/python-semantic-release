@@ -5,8 +5,9 @@ jobs:
   cut-release:
     runs-on: ubuntu-latest
     permissions:
-      id-token: write
+      actions: write
       contents: write
+      id-token: write
     steps:
       - name: Restrict branch
         if: github.ref != 'refs/heads/main'
