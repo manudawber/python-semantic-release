@@ -5,7 +5,6 @@ jobs:
   cut-release:
     runs-on: ubuntu-latest
     permissions:
-#      actions: write
       contents: write
       id-token: write
     steps:
@@ -29,35 +28,16 @@ jobs:
         id: create-release-branch
         env:
           VERSION_TAG: ${{ steps.release.outputs.tag }}
-          GIT_AUTHOR_NAME: github-actions
-          GIT_AUTHOR_EMAIL: github-actions@github.com
         run: |
-          #rm -f .git/COMMIT_EDITMSG
-          #git config --global user.email "github-actions@github.com"
-          #git config --global user.name "github-actions"
           version_short="$(cut -d '.' -f 1,2 <<< "$VERSION_TAG")"
           release_branch="release/$version_short"
           git fetch origin "$release_branch" || (
             git checkout -b "$release_branch"
-            #git commit --allow-empty -m "Deploy $VERSION_TAG to staging"
             git push -u origin HEAD
           )
           echo "release-branch=$release_branch" >> "$GITHUB_OUTPUT"
       - env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
+          VERSION_TAG: ${{ steps.release.outputs.tag }}
           RELEASE_BRANCH: ${{ steps.create-release-branch.outputs.release-branch }}
-        run: gh workflow run '__deploy_stg.yaml' --ref "$RELEASE_BRANCH"
-#      - name: Trigger deployment
-#        uses: actions/github-script@v6
-#        env:
-#          RELEASE_BRANCH: ${{ steps.create-release-branch.outputs.release-branch }}
-#        with:
-#          github-token: ${{ secrets.PAT }}
-#          script: |
-#            const RELEASE_BRANCH = process.env.RELEASE_BRANCH
-#            github.rest.actions.createWorkflowDispatch({
-#              owner: context.repo.owner,
-#              repo: context.repo.repo,
-#              workflow_id: '__deploy_stg.yaml',
-#              ref: RELEASE_BRANCH,
-#            })
+        run: gh workflow run '__deploy_stg.yaml' --ref "$RELEASE_BRANCH" -f version_tag="$VERSION_TAG"

@@ -2,6 +2,9 @@ name: Deploy to Staging
 
 on:
   workflow_dispatch:
+    inputs:
+      version_tag:
+        description: A valid version tag to deploy.
   push:
     branches:
       - release/**
@@ -16,4 +19,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - run: echo Hello world
+      - name: Checkout version
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.version_tag }}
