@@ -3,6 +3,12 @@
 
 
 
+## v2.4.1 (2023-08-08)
+
+### Fix
+
+* fix: only create new branch if doesn&#39;t exist ([`57dd104`](https://github.com/manudawber/python-semantic-release/commit/57dd104003209fadc8d1e4ef26fe545cad7314df))
+
 ## v2.4.0 (2023-08-08)
 
 ### Feature
