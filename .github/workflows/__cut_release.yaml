@@ -37,9 +37,11 @@ jobs:
           #git config --global user.name "github-actions"
           version_short="$(cut -d '.' -f 1,2 <<< "$VERSION_TAG")"
           release_branch="release/$version_short"
-          git checkout -b "$release_branch"
-          #git commit --allow-empty -m "Deploy $VERSION_TAG to staging"
-          git push -u origin HEAD
+          git fetch origin "$release_branch" || (
+            git checkout -b "$release_branch"
+            #git commit --allow-empty -m "Deploy $VERSION_TAG to staging"
+            git push -u origin HEAD
+          )
           echo "release-branch=$release_branch" >> "$GITHUB_OUTPUT"
       - env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
