@@ -32,7 +32,9 @@ jobs:
           GIT_AUTHOR_NAME: github-actions
           GIT_AUTHOR_EMAIL: github-actions@github.com
         run: |
-          rm -f .git/COMMIT_EDITMSG
+          #rm -f .git/COMMIT_EDITMSG
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
           version_short="$(cut -d '.' -f 1,2 <<< "$VERSION_TAG")"
           release_branch="release/$version_short"
           git checkout -b "$release_branch"
