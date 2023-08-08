@@ -3,6 +3,12 @@
 
 
 
+## v2.3.11 (2023-08-08)
+
+### Fix
+
+* fix: trigger workflow dispatch ([`bb1a98e`](https://github.com/manudawber/python-semantic-release/commit/bb1a98e9a8677cf1b1ee49c5d0717abfb141414e))
+
 ## v2.3.10 (2023-08-08)
 
 ### Fix
