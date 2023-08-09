@@ -1,0 +1,36 @@
+name: Cut release
+on:
+  workflow_dispatch:
+    inputs:
+      commit_id:
+        description: The full ID of a commit within this repo to cherry pick onto the target branch.
+        required: true
+env:
+  INPUT_COMMIT_ID: ${{ inputs.commit_id }}
+jobs:
+  cherry-pick:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - name: Restrict branch
+        if: github.event_name == 'workflow_dispatch' && startsWith(github.ref, 'refs/heads/release/') != true
+        run: echo "This workflow may only be run from release branches [release/**]"; exit 1
+      - name: Checkout branch
+        uses: actions/checkout@v3
+      - name: Restrict commit
+        run: |
+          commit_message="$(git log --format=%s%b -n 1 "$INPUT_COMMIT_ID")"
+          commit_type="${commit_message%%:*}"
+          if [[ "$commit_type" != 'fix' ]]; then
+            echo "Only commits of the type [fix] can be cherry picked to a release branch"
+            exit 1
+          fi
+      - name: Cherry pick commit
+        run: git cherry-pick "$INPUT_COMMIT_ID"
+#      - name: Trigger staging deployment
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.HYBB8_PAT_READONLY }}
+#          RELEASE_BRANCH: ${{ steps.create-release-branch.outputs.release-branch }}
+#        run: gh workflow run 'deploy_stg.yaml' --ref "$RELEASE_BRANCH"

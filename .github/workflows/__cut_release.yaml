@@ -15,29 +15,38 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: Get latest version
+        id: latest-version
+        run: echo "version=$(git describe --tags --abbrev=0)" >> "$GITHUB_OUTPUT"
       - name: Create release
         id: release
         uses: python-semantic-release/python-semantic-release@v8.0.4
         with:
+          root_options: -v --noop
           github_token: ${{ secrets.PAT }}
           prerelease: false
           push: true
           changelog: true
           vcs_release: true
-      - name: Create release branch
-        id: create-release-branch
-        env:
-          VERSION_TAG: ${{ steps.release.outputs.tag }}
-        run: |
-          version_short="$(cut -d '.' -f 1,2 <<< "$VERSION_TAG")"
-          release_branch="release/$version_short"
-          git fetch origin "$release_branch" || (
-            git checkout -b "$release_branch"
-            git push -u origin HEAD
-          )
-          echo "release-branch=$release_branch" >> "$GITHUB_OUTPUT"
       - env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
-          VERSION_TAG: ${{ steps.release.outputs.tag }}
-          RELEASE_BRANCH: ${{ steps.create-release-branch.outputs.release-branch }}
-        run: gh workflow run '__deploy_stg.yaml' --ref "$RELEASE_BRANCH" -f version_tag="$VERSION_TAG"
+          OLD_TAG: ${{ steps.latest-version.outputs.version }}
+          NEW_TAG: ${{ steps.release.outputs.tag }}
+        run: |
+          echo "$OLD_TAG -> $NEW_TAG"
+#      - name: Create release branch
+#        id: create-release-branch
+#        env:
+#          VERSION_TAG: ${{ steps.release.outputs.tag }}
+#        run: |
+#          version_short="$(cut -d '.' -f 1,2 <<< "$VERSION_TAG")"
+#          release_branch="release/$version_short"
+#          git fetch origin "$release_branch" || (
+#            git checkout -b "$release_branch"
+#            git push -u origin HEAD
+#          )
+#          echo "release-branch=$release_branch" >> "$GITHUB_OUTPUT"
+#      - name: Trigger staging deployment
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.PAT }}
+#          RELEASE_BRANCH: ${{ steps.create-release-branch.outputs.release-branch }}
+#        run: gh workflow run 'deploy_stg.yaml' --ref "$RELEASE_BRANCH"
