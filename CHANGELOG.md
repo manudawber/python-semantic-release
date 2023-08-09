@@ -3,6 +3,12 @@
 
 
 
+## v2.13.0 (2023-08-09)
+
+### Fix
+
+* fix: cherry pick increments the patch version ([`5ecd0aa`](https://github.com/manudawber/python-semantic-release/commit/5ecd0aa7942f0cd5c8f93aecee77976e1d33bced))
+
 ## v2.12.0 (2023-08-09)
 
 ### Fix
