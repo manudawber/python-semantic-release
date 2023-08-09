@@ -3,6 +3,16 @@
 
 
 
+## v2.10.0 (2023-08-09)
+
+### Feature
+
+* feat: add new bump release workflow ([`d88e125`](https://github.com/manudawber/python-semantic-release/commit/d88e12546f1e4a984331fd45155fb7c9b2624cc3))
+
+### Fix
+
+* fix: retrieve full git history got `git log` ([`0af6f9d`](https://github.com/manudawber/python-semantic-release/commit/0af6f9dbe948471e7e73be7a50dc72dafdbbe318))
+
 ## v2.9.0 (2023-08-09)
 
 ### Feature
