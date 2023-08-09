@@ -1,4 +1,4 @@
-name: Cut release
+name: Cherry pick
 on:
   workflow_dispatch:
     inputs:
@@ -14,12 +14,14 @@ jobs:
       contents: write
       id-token: write
     steps:
-      - name: Restrict branch
+      - name: Validate branch
         if: github.event_name == 'workflow_dispatch' && startsWith(github.ref, 'refs/heads/release/') != true
         run: echo "This workflow may only be run from release branches [release/**]"; exit 1
       - name: Checkout branch
         uses: actions/checkout@v3
-      - name: Restrict commit
+        with:
+          fetch-depth: 0
+      - name: Validate commit
         run: |
           commit_message="$(git log --format=%s%b -n 1 "$INPUT_COMMIT_ID")"
           commit_type="${commit_message%%:*}"

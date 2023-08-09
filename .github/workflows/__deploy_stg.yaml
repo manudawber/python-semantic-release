@@ -1,25 +1,18 @@
 name: Deploy to Staging
-
 on:
-  workflow_dispatch:
-    inputs:
-      version_tag:
-        description: A valid version tag to deploy.
   push:
-    branches:
-      - release/**
-
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
-
 jobs:
-  release_action:
+  deploy-to-staging:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - name: Checkout version
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ inputs.version_tag }}
+      - uses: actions/checkout@v3
+      - run: cat CHANGELOG.md
+      - run: git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s" | cat
+
