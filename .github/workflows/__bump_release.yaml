@@ -1,0 +1,31 @@
+name: Bump release
+on:
+  push:
+    branches:
+      - release/v**
+    paths-ignore:
+      - CHANGELOG.md
+      - src/__init__.py
+jobs:
+  bump-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - name: Checkout release branch
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Release
+        id: release
+        uses: python-semantic-release/python-semantic-release@v8.0.4
+        with:
+          github_token: ${{ secrets.PAT }}
+          force: minor
+      - name: Trigger staging deployment
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
+          RELEASE_BRANCH: ${{ steps.create-release-branch.outputs.release-branch }}
+          VERSION: ${{ steps.release.outputs.tag }}
+        run: gh workflow run '__deploy_stg.yaml' --ref "$RELEASE_BRANCH" -f version="$VERSION"
