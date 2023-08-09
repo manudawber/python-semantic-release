@@ -3,6 +3,12 @@
 
 
 
+## v2.13.1 (2023-08-09)
+
+### Fix
+
+* fix: test github_ref full ([`5abd178`](https://github.com/manudawber/python-semantic-release/commit/5abd178df9e4a190fde8e224a3e3ad68fb35ec30))
+
 ## v2.13.0 (2023-08-09)
 
 ### Feature
