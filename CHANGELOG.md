@@ -3,6 +3,16 @@
 
 
 
+## v2.5.0 (2023-08-09)
+
+### Feature
+
+* feat: test release action again ([`a3e7801`](https://github.com/manudawber/python-semantic-release/commit/a3e7801a9e2ba0e99347b49fea20e96b159e7cbe))
+
+* feat: test release action ([`51e0919`](https://github.com/manudawber/python-semantic-release/commit/51e091988b8df3aee22e34e4327f7a20d914c5f5))
+
+* feat: use version tag as input ([`014fd20`](https://github.com/manudawber/python-semantic-release/commit/014fd200470ae0278fafa2d993cbdfaf8d1029e9))
+
 ## v2.4.1 (2023-08-08)
 
 ### Fix
