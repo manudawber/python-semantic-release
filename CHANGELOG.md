@@ -3,6 +3,28 @@
 
 
 
+## v2.13.0 (2023-08-09)
+
+### Feature
+
+* feat: 29 ([`28ee7e4`](https://github.com/manudawber/python-semantic-release/commit/28ee7e4b84b9bb22578b9adbdcc8ffcd5dbc81b4))
+
+* feat: 25 ([`95c7cfd`](https://github.com/manudawber/python-semantic-release/commit/95c7cfd281d06923ea91786efc57aa48a18c29fe))
+
+* feat: 24 ([`2f5d2b5`](https://github.com/manudawber/python-semantic-release/commit/2f5d2b57cbf386b14afd45ddcf53ba321dd28f6a))
+
+* feat: 22 ([`d6d3bda`](https://github.com/manudawber/python-semantic-release/commit/d6d3bdab2e0ade3490816a444e2aa3a3d58094ad))
+
+### Fix
+
+* fix: 28 ([`afd3de1`](https://github.com/manudawber/python-semantic-release/commit/afd3de1ef223da617e7044c78d86f52b407e0d94))
+
+* fix: 27 ([`af2ab57`](https://github.com/manudawber/python-semantic-release/commit/af2ab5782f5fbe24a6f8115238faea15283f9c30))
+
+* fix: 26 ([`b01b573`](https://github.com/manudawber/python-semantic-release/commit/b01b573c876209b0b78dfb919bbfa17aa6142598))
+
+* fix: 23 ([`8dacc32`](https://github.com/manudawber/python-semantic-release/commit/8dacc3276c2fc3d61513a6ae1acc05c79c56ee8b))
+
 ## v2.12.0 (2023-08-09)
 
 ### Feature
