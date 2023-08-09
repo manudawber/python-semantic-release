@@ -53,7 +53,7 @@ jobs:
           echo "release-branch=$release_branch" >> "$GITHUB_OUTPUT"
       - name: Trigger staging deployment
         env:
-          GH_TOKEN: ${{ secrets.HYBB8_PAT_READONLY }}
+          GH_TOKEN: ${{ secrets.PAT }}
           RELEASE_BRANCH: ${{ steps.create-release-branch.outputs.release-branch }}
           VERSION: ${{ steps.release.outputs.tag }}
         run: gh workflow run '__deploy_stg.yaml' --ref "$RELEASE_BRANCH" -f version="$VERSION"
