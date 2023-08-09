@@ -3,6 +3,28 @@
 
 
 
+## v2.12.0 (2023-08-09)
+
+### Feature
+
+* feat: 15 ([`eeebf2f`](https://github.com/manudawber/python-semantic-release/commit/eeebf2f65f40e155c15004f152461baaee21b944))
+
+### Fix
+
+* fix: cherry pick increments the patch version ([`571dac3`](https://github.com/manudawber/python-semantic-release/commit/571dac30564c3d52f6dbd2c7afdd3ff4b98dca0c))
+
+* fix: cherry pick increments the patch version ([`e7a46f0`](https://github.com/manudawber/python-semantic-release/commit/e7a46f00eba950a610d86cd5ad44513d98d2d05e))
+
+* fix: 18 ([`5a016e7`](https://github.com/manudawber/python-semantic-release/commit/5a016e7c4d8ef9a8a034e0b3f44386646c1a1d97))
+
+* fix: 17 ([`bf5c05e`](https://github.com/manudawber/python-semantic-release/commit/bf5c05ec245b8b6caedda4b70a957d096b48c636))
+
+* fix: 16 ([`c8ebf3f`](https://github.com/manudawber/python-semantic-release/commit/c8ebf3fbebe7f19abb1aea521be24d6e3bd8959f))
+
+### Unknown
+
+* feat 21 ([`f91a6b5`](https://github.com/manudawber/python-semantic-release/commit/f91a6b554110ebc4acc8093cae4aa1443b4005d3))
+
 ## v2.11.0 (2023-08-09)
 
 ### Feature
