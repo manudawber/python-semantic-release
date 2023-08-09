@@ -30,9 +30,22 @@ jobs:
             exit 1
           fi
       - name: Cherry pick commit
-        run: git cherry-pick "$INPUT_COMMIT_ID"
-#      - name: Trigger staging deployment
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.HYBB8_PAT_READONLY }}
-#          RELEASE_BRANCH: ${{ steps.create-release-branch.outputs.release-branch }}
-#        run: gh workflow run 'deploy_stg.yaml' --ref "$RELEASE_BRANCH"
+        env:
+          GIT_COMMITTER_NAME: github-actions
+          GIT_COMMITTER_EMAIL: github-actions@github.com
+        run: |
+          git config --global user.email "$GITBOT_EMAIL"
+          git config --global user.name "$GITHUB_ACTOR"
+          git cherry-pick "$INPUT_COMMIT_ID"
+          git push -u origin
+      - name: Release
+        id: release
+        uses: python-semantic-release/python-semantic-release@v8.0.4
+        with:
+          github_token: ${{ secrets.PAT }}
+          force: minor
+      - name: Trigger staging deployment
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
+          VERSION: ${{ steps.release.outputs.tag }}
+        run: gh workflow run '__deploy_stg.yaml' --ref "${GITHUB_REF#refs/heads/}" -f version="$VERSION"

@@ -27,7 +27,7 @@ jobs:
       - name: Validate release
         env:
           OLD_VERSION: ${{ steps.get-latest-version.outputs.version }}
-          NEW_VERSION: ${{ steps.check-release.outputs.tag }}
+          NEW_VERSION: ${{ steps.get-latest-version.outputs.tag }}
         run: |
           old_version_short="$(cut -d '.' -f 1,2 <<< "$OLD_VERSION")"
           new_version_short="$(cut -d '.' -f 1,2 <<< "$NEW_VERSION")"

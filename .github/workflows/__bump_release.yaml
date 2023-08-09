@@ -2,7 +2,8 @@ name: Bump release
 on:
   push:
     branches:
-      - release/v**
+      - disable
+#      - release/v**
     paths-ignore:
       - CHANGELOG.md
       - src/__init__.py
