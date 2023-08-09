@@ -1,8 +1,13 @@
 name: Deploy to Staging
 on:
-  push:
-    tags:
-      - 'v[0-9]+.[0-9]+.[0-9]+'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: A valid version tag to deploy
+        required: true
+#  push:
+#    tags:
+#      - 'v[0-9]+.[0-9]+.[0-9]+'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false

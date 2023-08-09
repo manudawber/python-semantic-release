@@ -50,3 +50,10 @@ jobs:
           release_branch="release/$version_short"
           git checkout -b "$release_branch"
           git push -u origin HEAD
+          echo "release-branch=$release_branch" >> "$GITHUB_OUTPUT"
+      - name: Trigger staging deployment
+        env:
+          GITHUB_TOKEN: ${{ secrets.HYBB8_PAT_READONLY }}
+          RELEASE_BRANCH: ${{ steps.create-release-branch.outputs.release-branch }}
+          VERSION: ${{ steps.release.outputs.tag }}
+        run: gh workflow run '__deploy_stg.yaml' --ref "$RELEASE_BRANCH" -f version="$VERSION"
