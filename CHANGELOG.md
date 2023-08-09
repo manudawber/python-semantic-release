@@ -3,6 +3,12 @@
 
 
 
+## v2.9.0 (2023-08-09)
+
+### Feature
+
+* feat: test deploy 3 ([`8d2ffc5`](https://github.com/manudawber/python-semantic-release/commit/8d2ffc5e2e27f58f2ecffe3c870038501610fa34))
+
 ## v2.8.0 (2023-08-09)
 
 ### Feature
