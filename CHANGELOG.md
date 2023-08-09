@@ -3,6 +3,18 @@
 
 
 
+## v2.11.0 (2023-08-09)
+
+### Feature
+
+* feat: 13 ([`0d771a2`](https://github.com/manudawber/python-semantic-release/commit/0d771a298c5cf460b66429da9de45b5739e262ee))
+
+### Fix
+
+* fix: use cherry pick to trigger deployment ([`513ce63`](https://github.com/manudawber/python-semantic-release/commit/513ce63edee4dd6fc3bf360ccfdeaa3b20830312))
+
+* fix: 14 ([`a032775`](https://github.com/manudawber/python-semantic-release/commit/a032775d3ba392c8adf649879561839c64e4dadd))
+
 ## v2.10.0 (2023-08-09)
 
 ### Feature
