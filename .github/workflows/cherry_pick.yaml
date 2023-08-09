@@ -48,4 +48,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PAT }}
           VERSION: ${{ steps.release.outputs.tag }}
-        run: gh workflow run '__deploy_stg.yaml' --ref "${GITHUB_REF#refs/heads/}" -f version="$VERSION"
+        run: gh workflow run '__deploy_stg.yaml' --ref "$GITHUB_REF" -f version="$VERSION"
